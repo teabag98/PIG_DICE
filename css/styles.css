@@ -1,0 +1,32 @@
+
+body{
+  background-color: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+
+
+.jumbotron{
+ background-image: url(https://st2.depositphotos.com/8846918/11650/i/950/depositphotos_116504844-stock-photo-3d-rendering-six-dice-on.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ opacity: 0.8;
+}
+
+
+.player-names{
+  background-color: white;
+  opacity: 0.8;
+  box-shadow: 0 0 20px cyan;
+  text-align: center;
+
+}
+#play{
+  border-radius: 20px;
+ font-size: 2em;
+ color: black;
+}
+
+.play{
+  text-align: center;
+  margin-right: 10em;
+}
