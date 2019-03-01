@@ -1,6 +1,7 @@
 
 body{
-  background-color: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  font-family: 'Inconsolata', monospace;
 }
 
 
@@ -29,4 +30,25 @@ body{
 .play{
   text-align: center;
   margin-right: 10em;
+}
+
+
+.player1-results{
+  text-align: center;
+}
+
+.player2-results{
+  text-align: center;
+}
+
+.guidelines{
+  background-color: white;
+  opacity: 0.8;
+  box-shadow: 0 0 20px cyan;
+  text-align: center;
+  padding: 8em;
+  font-size: 1.5em;
+}
+.guidelines > ul{
+  text-align: left;
 }

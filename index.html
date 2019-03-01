@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>dice roll</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
+<link href="https://fonts.googleapis.com/css?family=Inconsolata|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -53,10 +53,47 @@
         </div>
       </div>
       <br>
- <div class="play">
-     <button id="play" type="button" class="btn btn-outline-info">Play</button>
- </div>
+      <div class="play">
+        <button id="play" type="button" class="btn btn-outline-info">Play</button>
+      </div>
 
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+
+      </div>
+      <div class="col-md-6 guidelines" >
+        <p><b>DESCRIPTION</b></p>
+        <p>Pig is one of a family of dice games described by Reiner Knizia as "jeopardy dice games". For jeopardy dice games, the dominant type of decision is whether or not to jeopardize previous gains by rolling for potential greater gains. Most
+          jeopardy dice games can be further subdivided into two categories: jeopardy race games and jeopardy approach games. In jeopardy race games, the object is to be the first to meet or exceed a goal score . In jeopardy approach games, the
+          object is to most closely approach a goal score without exceeding it</p>
+          <p><b>RULES</b></p>
+          <ul>
+            <li>Player can hold if they fear losing</li>
+            <li>player only wins if he scores 100%</li>
+            <li>When a roll outcome is 1, player loses all points</li>
+          </ul>
+      </div>
+      <div class="col-md-3">
+
+      </div>
+
+    </div>
+    <br><br><br><br>
+    <div class="row results">
+      <div class="col-md-4 player1-results">
+        <h1>player 1 is <span class=""></span></h1>
+        <div class="total-score"></div>
+        <div class="current-score"></div>
+      </div>
+      <div class="col-md-2">
+        <p><img width="100%" height="30%" src="images/vs.jpg" alt="vs"></p>
+      </div>
+      <div class="col-md-4 player2-results">
+        <h1>player 2 is <span class=""></span></h1>
+        <div class="total-score"></div>
+        <div class="current-score"></div>
+      </div>
     </div>
 
   </div>
