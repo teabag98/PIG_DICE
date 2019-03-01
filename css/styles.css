@@ -52,3 +52,9 @@ body{
 .guidelines > ul{
   text-align: left;
 }
+
+.buttons>button{
+  padding: 1.5rem;
+  border-radius: 2em;
+  font-size: 2em;
+}
