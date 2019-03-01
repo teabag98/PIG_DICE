@@ -4,7 +4,14 @@ body{
   font-family: 'Inconsolata', monospace;
 }
 
+.header{
+  display: none;
+  background-image: url(https://st2.depositphotos.com/8846918/11650/i/950/depositphotos_116504844-stock-photo-3d-rendering-six-dice-on.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
 
+}
 
 .jumbotron{
  background-image: url(https://st2.depositphotos.com/8846918/11650/i/950/depositphotos_116504844-stock-photo-3d-rendering-six-dice-on.jpg);
