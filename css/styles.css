@@ -6,10 +6,14 @@ body{
 
 .header{
   display: none;
-  background-image: url(https://st2.depositphotos.com/8846918/11650/i/950/depositphotos_116504844-stock-photo-3d-rendering-six-dice-on.jpg);
+  background-image: url(https://cdn.shopify.com/s/files/1/0933/1330/products/Pig_Dice_1024x1024.JPG?v=1438377592);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
+  height: 10em;
+  text-align: center;
+  font-size: 3em;
+  color: white;
 
 }
 
@@ -53,8 +57,9 @@ body{
   opacity: 0.8;
   box-shadow: 0 0 20px cyan;
   text-align: center;
-  padding: 8em;
+  padding: 5em;
   font-size: 1.5em;
+
 }
 .guidelines > ul{
   text-align: left;

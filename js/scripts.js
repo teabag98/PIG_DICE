@@ -1,28 +1,45 @@
 //business logic
-function rollDice(){
-  return Math.floor(Math.random()*6)+1
-}
+var randomNumber = Math.floor(Math.random() * 6) + 1
 
-
-function PigDice() {
-  this.rollScore = 0;
-  this.temporaryScore = 0;
+function PigDice(addingUp(), randomNumber) {
+  this.permanentScore = addingUp();
+  this.temporaryScore = randomNumber;
   this.hold;
+  this.play;
 
 
 }
+
+
 
 //when the outcome is 1
-PigDice.prototype.one = function(){
-  if(this.temporaryScore===1){
-    alert( "your turn is over. Your total score is 0");
-    this.rollScore = 0;
+PigDice.prototype.addingUp = function(num) {
+  if (this.temporaryScore === 1) {
+    alert("your turn is over. Your total score is 0");
+    this.permanentScore = 0;
+
+  } else if(this.temporaryScore === 2) {
+    this.permanentscore +=10;
 
   }
+  else if(this.temporaryScore===3){
+    this.permanentScore +=15;
+  }
+  else if(this.temporaryScore===4){
+    this.permanentScore +=15;
+  }
+  else if(this.temporaryScore=== 5){
+    this.permanentScore +=20
+  }
   else{
-   this.rollScore += this.temporaryScore;
+    this.permanentScore+=20
   }
 }
+
+//objects
+var firstGamer = new PigDice();
+var secondGamer = new PigDice();
+
 
 
 
@@ -48,5 +65,8 @@ $(document).ready(function() {
     });
 
     $("div.header").show();
+  });
+  $("button#roll").click(function() {
+$("#tester").text(firstGamer.addingUp(randomNumber));
   });
 });
