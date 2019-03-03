@@ -5,26 +5,43 @@ function Dice() {
 }
 //change the dice patterns and show results
 var randomNumber;
+var playerOne = new Dice();
+var playerTwo = new Dice();
 
 function diceRollOne() {
   randomNumber = Math.floor(Math.random() * 6) + 1;
   var images = document.getElementById("diceroll1");
   images.src = "images/" + randomNumber + ".png";
+
+  if (randomNumber !== 1) {
+    var tempScore = playerOne.rollScore += randomNumber;
+    document.getElementById("current-score").innerHTML = playerOne.rollScore;
+  }
+  else{
+    playerOne.rollScore =0;
+    document.getElementById("current-score").innerHTML = playerOne.rollScore;
+  }
 }
+
+var secondRandomNumber;
 
 function diceRollTwo() {
-  var randomNumber = Math.floor(Math.random() * 6) + 1;
+  secondRandomNumber = Math.floor(Math.random() * 6) + 1;
   var images = document.getElementById("diceroll2");
-  images.src = "images/" + randomNumber + ".png";
+  images.src = "images/" + secondRandomNumber + ".png";
+
+  if (secondRandomNumber !== 1) {
+    playerTwo.rollScore += secondRandomNumber;
+    document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
+  }
+  else{
+    playerTwo.rollScore =0;
+    document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
+  }
+
 }
 
-var playerOne = new Dice();
-var playerTwo = new Dice();
 
-if (randomNumber !== 1) {
-  playerOne.rollScore += randomNumber;
-  document.getElementById("current-score").innerHTML = playerOne.rollScore;
-}
 
 
 
