@@ -3,11 +3,12 @@ function Dice() {
   this.total = 0;
   this.rollScore = 0;
 }
-//change the dice patterns and show results
+
 var randomNumber;
 var playerOne = new Dice();
 var playerTwo = new Dice();
 
+//change the dice patterns and show results
 function diceRollOne() {
   randomNumber = Math.floor(Math.random() * 6) + 1;
   var images = document.getElementById("diceroll1");
@@ -20,6 +21,10 @@ function diceRollOne() {
   else{
     playerOne.rollScore =0;
     document.getElementById("current-score").innerHTML = playerOne.rollScore;
+    document.getElementById("player1-roll").disabled = true;
+    document.getElementById("player1-hold").disabled = true;
+    document.getElementById("player2-roll").disabled = false;
+    document.getElementById("player2-hold").disabled = false;
   }
 }
 
@@ -37,11 +42,17 @@ function diceRollTwo() {
   else{
     playerTwo.rollScore =0;
     document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
+    document.getElementById("player2-roll").disabled = true;
+    document.getElementById("player2-hold").disabled = true;
+    document.getElementById("player1-roll").disabled = false;
+    document.getElementById("player1-hold").disabled = false;
   }
 
 }
 
-
+Dice.prototype.hold =function(){
+  this.total += this.rollscore;
+}
 
 
 
