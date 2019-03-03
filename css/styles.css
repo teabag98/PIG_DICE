@@ -60,7 +60,11 @@ body{
 
 
 .player1-results{
-  text-align: center;
+  
+  border: 1px solid grey;
+border-radius: 10px;
+text-align: center;
+padding: 15px 50px;
 }
 
 .player2-results{

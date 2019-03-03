@@ -18,9 +18,8 @@ function diceRollOne() {
   if (randomNumber !== 1) {
     var tempScore = playerOne.rollScore += randomNumber;
     document.getElementById("current-score").innerHTML = playerOne.rollScore;
-  }
-  else{
-    playerOne.rollScore =0;
+  } else {
+    playerOne.rollScore = 0;
     playerOne.total = 0;
     document.getElementById("current-score").innerHTML = playerOne.rollScore;
     document.getElementById("total-score").innerHTML = playerOne.total;
@@ -39,54 +38,57 @@ function diceRollTwo() {
   if (secondRandomNumber !== 1) {
     playerTwo.rollScore += secondRandomNumber;
     document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
-  }
-  else{
-    playerTwo.rollScore =0;
-    playerTwo.total=0;
+  } else {
+    playerTwo.rollScore = 0;
+    playerTwo.total = 0;
     document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
     document.getElementById("total-score2").innerHTML = playerTwo.total;
-   playerTwoSwitch();
+    playerTwoSwitch();
 
   }
 }
 
 
-Dice.prototype.hold =function(){
+Dice.prototype.hold = function() {
   this.total += this.rollscore;
 }
 
-function updateFirstScore(){
-  var total= playerOne.total += playerOne.rollScore;
+function updateFirstScore() {
+  var total = playerOne.total += playerOne.rollScore;
   document.getElementById("total-score").innerHTML = total;
   playerOne.rollScore = 0;
   document.getElementById("current-score").innerHTML = playerOne.rollScore;
 }
 
-function updateSecondScore(){
-  var total= playerTwo.total += playerTwo.rollScore;
+function updateSecondScore() {
+  var total = playerTwo.total += playerTwo.rollScore;
   document.getElementById("total-score2").innerHTML = total;
   playerTwo.rollScore = 0;
   document.getElementById("current-score2").innerHTML = playerOne.rollScore;
 }
 
 
-function playerOneSwitch(){
+function playerOneSwitch() {
   document.getElementById("player1-roll").disabled = true;
   document.getElementById("player1-hold").disabled = true;
   document.getElementById("player2-roll").disabled = false;
   document.getElementById("player2-hold").disabled = false;
 
 }
-function playerTwoSwitch(){
+
+function playerTwoSwitch() {
   document.getElementById("player2-roll").disabled = true;
   document.getElementById("player2-hold").disabled = true;
   document.getElementById("player1-roll").disabled = false;
   document.getElementById("player1-hold").disabled = false;
 }
 
-Dice.prototype.winner = function(){
-  if(this.total>=100){
+Dice.prototype.winner = function() {
+  if (this.total >= 10) {
     alert("congratulations");
+  }
+  else{
+    alert("jkjhkvkdjn")
   }
 }
 playerOne.winner();
@@ -113,14 +115,14 @@ $(document).ready(function() {
   $("button#player2-roll").click(function() {
     diceRollTwo();
   });
-$("button#player1-hold").click(function(){
-updateFirstScore();
-playerOneSwitch();
-});
-$("button#player2-hold").click(function(){
-updateSecondScore();
-playerTwoSwitch();
-});
+  $("button#player1-hold").click(function() {
+    updateFirstScore();
+    playerOneSwitch();
+  });
+  $("button#player2-hold").click(function() {
+    updateSecondScore();
+    playerTwoSwitch();
+  });
 });
 
 
