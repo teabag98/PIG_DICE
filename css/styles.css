@@ -60,15 +60,21 @@ body{
 
 
 .player1-results{
-  
+
   border: 1px solid grey;
 border-radius: 10px;
 text-align: center;
 padding: 15px 50px;
+margin-left: 2em;
+background-image: url();
 }
 
 .player2-results{
   text-align: center;
+  border: 1px solid grey;
+border-radius: 10px;
+text-align: center;
+padding: 15px 50px;
 }
 
 .guidelines{

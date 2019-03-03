@@ -28,6 +28,8 @@ function diceRollOne() {
   }
 }
 
+
+//guesses number
 var secondRandomNumber;
 
 function diceRollTwo() {
@@ -48,7 +50,7 @@ function diceRollTwo() {
   }
 }
 
-
+//adds current score to total score
 Dice.prototype.hold = function() {
   this.total += this.rollscore;
 }
@@ -83,16 +85,27 @@ function playerTwoSwitch() {
   document.getElementById("player1-hold").disabled = false;
 }
 
-Dice.prototype.winner = function() {
-  if (this.total >= 10) {
-    alert("congratulations");
+// Dice.prototype.winner = function() {
+//   if (this.total >= 10) {
+//     alert("congratulations");
+//   }
+//   else{
+//
+//   }
+
+ //checks winner
+function winner(){
+  if(playerOne.total >=100){
+    alert(gamerOne +" you are winner")
   }
-  else{
-    alert("jkjhkvkdjn")
+  else if(playerTwo.total>=100){
+    alert(gamerTwo +" you are a winner")
   }
 }
-playerOne.winner();
-playerTwo.winner();
+
+
+
+
 
 
 
@@ -118,10 +131,12 @@ $(document).ready(function() {
   $("button#player1-hold").click(function() {
     updateFirstScore();
     playerOneSwitch();
+    winner();
   });
   $("button#player2-hold").click(function() {
     updateSecondScore();
     playerTwoSwitch();
+    winner();
   });
 });
 
