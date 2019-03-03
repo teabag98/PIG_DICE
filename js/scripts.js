@@ -1,27 +1,96 @@
 //business logic
-
-
-function PigDice() {
-  this.permanentScore = 0;
-  this.temporaryScore = 0;
-  this.hold;
-  this.roll;
-
+function Players(player1, player2) {
+  this.firstPlayer = player1;
+  this.secondPlayer = player2;
 
 }
 
-var arrayNumbers = [];
 
-var randomNumber;
 
-PigDice.prototype.generateNumber = function() {
-  randomNumber = Math.floor(Math.random() * 6) + 1
-  arrayNumbers.push(randomNumber);
-  for (i = 1; i <= randomNumber.length; i++) {
-alert("hey"+i);
-  }
-}
-generateNumber();
+
+
+
+
+
+//user logic
+$(document).ready(function() {
+  var gamerOne = $("input#gamer1").val();
+  var gamerTwo = $("input#gamer2").val();
+
+  var playerNames = new Players(gamerOne,gamerTwo);
+
+  $("#play").click(function() {
+    $(".jumbotron").slideUp(800, )
+    // $("#tester").text(gamerOne);
+    // $("input#gamer1").val("");
+    //  $("input#gamer2").val("");
+  $("#tester").text(playerNames.firstPlayer)
+  });
+});
+
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+// //user logic
+// $(document).ready(function() {
+//   var gamerOne = $("input#gamer1").val();
+//   var gamerTwo = $("input#gamer2").val();
+//   var gamerThree = $("input#gamer3").val();
+//   var gamerFour = $("input#gamer4").val();
+//   $("button#play").click(function() {
+//     $(".jumbotron").slideUp(800, function() {
+//       // $("h1.player-one").append(gamerOne);
+//       // $("h1.player-two").text(gamerThree);
+//
+//     });
+//
+//     $("div.header").show();
+//   });
+//
+// });
+// // });
+
+
+
+
+
+
+
+
+
+//business logic
+
+//
+// function PigDice() {
+//   this.permanentScore = 0;
+//   this.temporaryScore = 0;
+//   this.hold;
+//   this.roll;
+//
+//
+// }
+//
+// var arrayNumbers = [];
+//
+// var randomNumber;
+//
+// PigDice.prototype.generateNumber = function() {
+//   randomNumber = Math.floor(Math.random() * 6) + 1
+//   arrayNumbers.push(randomNumber);
+//   for (i = 1; i <= randomNumber.length; i++) {
+//     return this += [i];
+//   }
+// }
+
 
 
 
@@ -55,22 +124,3 @@ generateNumber();
 //
 // var accumulativeScore = firstGamer.permanentScore.generateNumber();
 //
-// //user logic
-// $(document).ready(function() {
-//   var gamerOne = $("input#gamer1").val();
-//   var gamerTwo = $("input#gamer2").val();
-//   var gamerThree = $("input#gamer3").val();
-//   var gamerFour = $("input#gamer4").val();
-//   $("button#play").click(function() {
-//     $(".jumbotron").slideUp(800, function() {
-//       // $("h1.player-one").append(gamerOne);
-//       // $("h1.player-two").text(gamerThree);
-//
-//     });
-//
-//     $("div.header").show();
-//   });
-  // $("button#roll").click(function() {
-  //   alert(firstGamer.roll.generateNumber());
-//   });
-// });

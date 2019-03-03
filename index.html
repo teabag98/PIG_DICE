@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>dice roll</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata|PT+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|PT+Sans" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,18 +17,7 @@
         <div class="col-md-4 player-names">
           <h1>player1</h1>
           <form class="" action="index.html" method="post">
-            <div class="input-group">
-              <div class="input-group-addon">
-                <span class="glyphicon glyphicon-user"></span>
-              </div>
-              <input placeholder="Enter first name" class="form-control" id="gamer1" name="user1" type="text" />
-            </div>
-            <div class="input-group">
-              <div class="input-group-addon">
-                <span class="glyphicon glyphicon-user"></span>
-              </div>
-              <input placeholder="Enter second name" class="form-control" id="gamer2" name="user2" type="text" />
-            </div>
+            <input id="gamer1" style="width: 300px;" placeholder="Enter first name" class="form-control"  name="user1" type="text" />
           </form>
         </div>
         <div class="col-md-2">
@@ -37,18 +26,9 @@
         <div class="col-md-4 player-names">
           <h1>player2</h1>
           <form class="" action="index.html" method="post">
-            <div class="input-group">
-              <div class="input-group-addon">
-                <span class="glyphicon glyphicon-user"></span>
-              </div>
-              <input placeholder="Enter first name" class="form-control"  id="gamer3" name="user1" type="text" />
-            </div><br>
-            <div class="input-group">
-              <div class="input-group-addon">
-                <span class="glyphicon glyphicon-user"></span>
-              </div>
-              <input placeholder="Enter second name" class="form-control" id="gamer4" name="user2" type="text" />
-            </div>
+
+            <input id="gamer3" style="width: 300px;" placeholder="Enter first name" class="form-control"  name="user1" type="text" />
+            <br>
           </form>
         </div>
       </div>
@@ -56,57 +36,57 @@
       <div class="play">
         <button id="play" type="button" class="btn btn-outline-info">Play</button>
       </div>
-        </div>
-        <div class="header">
-        <h2>Pig dice</h2>
-        <h2><em>To the game</em></h2>
-      </div>
+    </div>
+    <div class="header">
+      <h2>Pig dice</h2>
+      <h2><em>To the game</em></h2>
+    </div>
     <div class="row">
       <div class="col-md-2">
-
+        <img width="100%" height="500em;" src="images/roll-dice2.jpg" alt="img">
       </div>
-      <div class="col-md-8 guidelines" >
+      <div class="col-md-8 guidelines">
         <p><b>DESCRIPTION</b></p>
         <p>Pig is one of a family of dice games described by Reiner Knizia as "jeopardy dice games". For jeopardy dice games, the dominant type of decision is whether or not to jeopardize previous gains by rolling for potential greater gains. </p>
-          <p><b>RULES</b></p>
-          <ul>
-            <li>Player can hold if they fear losing</li>
-            <li>player only wins if he scores 100%</li>
-            <li>When a roll outcome is 1, player loses all points</li>
-          </ul>
+        <p><b>RULES</b></p>
+        <ul>
+          <li>Player can hold if they fear losing</li>
+          <li>player only wins if he scores 100%</li>
+          <li>When a roll outcome is 1, player loses all points</li>
+        </ul>
       </div>
       <div class="col-md-2">
-
+        <img width="100%" height="500em;" src="images/Rolling-Dice.jpg" alt="img">
       </div>
 
     </div>
     <br><br><br><br>
     <div class="row results">
       <div class="col-md-4 player1-results">
-        <h1>player 1 is <span class="player-one"></span></h1>
+        <h1>player 1 is <span class="playerOneName">memm</span></h1>
         <div class="total-score"></div><br><br>
         <div class="current-score"></div><br><br><br>
         <div class="buttons">
-<button type="button" class="btn btn-outline-info">roll</button>
-<button type="button" class="btn btn-outline-info">hold</button>
+          <button id="player1-roll" type="button" class="btn btn-outline-info">roll</button>
+          <button id="player1-hold." type="button" class="btn btn-outline-info">hold</button>
         </div>
       </div>
       <div class="col-md-2">
         <p><img width="100%" height="30%" src="images/vs.jpg" alt="vs"></p>
       </div>
       <div class="col-md-4 player2-results">
-        <h1>player 2 is <span class="player-two"></span></h1>
+        <h1>player 2 is <span class="playerTwoName"></span></h1>
         <div class="total-score"></div><br><br>
         <div class="current-score"></div><br><br><br>
-         <div class="buttons">
-<button id="roll" onclick="generateNumber()" type="button" class="btn btn-outline-info">roll</button>
-<button id="hold" type="button" class="btn btn-outline-info">hold</button>
-         </div>
+        <div class="buttons">
+          <button id="roll" type="button" class="btn btn-outline-info">roll</button>
+          <button id="hold" type="button" class="btn btn-outline-info">hold</button>
+        </div>
       </div>
     </div>
-<div id="tester">
+    <div id="tester">
 
-</div>
+    </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/scripts.js" type="text/javascript"></script>
