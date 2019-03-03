@@ -21,10 +21,8 @@ function diceRollOne() {
   else{
     playerOne.rollScore =0;
     document.getElementById("current-score").innerHTML = playerOne.rollScore;
-    document.getElementById("player1-roll").disabled = true;
-    document.getElementById("player1-hold").disabled = true;
-    document.getElementById("player2-roll").disabled = false;
-    document.getElementById("player2-hold").disabled = false;
+    playerOneSwitch();
+
   }
 }
 
@@ -41,17 +39,39 @@ function diceRollTwo() {
   }
   else{
     playerTwo.rollScore =0;
+    playerTwo.total=0;
     document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
-    document.getElementById("player2-roll").disabled = true;
-    document.getElementById("player2-hold").disabled = true;
-    document.getElementById("player1-roll").disabled = false;
-    document.getElementById("player1-hold").disabled = false;
-  }
+    document.getElementById("total-score2").innerHTML = playerTwo.total;
+   playerTwoSwitch();
 
+  }
 }
+
 
 Dice.prototype.hold =function(){
   this.total += this.rollscore;
+}
+
+function updateScore(){
+  var total= playerOne.total += playerOne.rollScore;
+  document.getElementById("total-score").innerHTML = total;
+  playerOne.rollScore = 0;
+  document.getElementById("current-score").innerHTML = playerOne.rollScore;
+}
+
+
+function playerOneSwitch(){
+  document.getElementById("player1-roll").disabled = true;
+  document.getElementById("player1-hold").disabled = true;
+  document.getElementById("player2-roll").disabled = false;
+  document.getElementById("player2-hold").disabled = false;
+
+}
+function playerTwoSwitch(){
+  document.getElementById("player2-roll").disabled = true;
+  document.getElementById("player2-hold").disabled = true;
+  document.getElementById("player1-roll").disabled = false;
+  document.getElementById("player1-hold").disabled = false;
 }
 
 
@@ -85,6 +105,9 @@ $(document).ready(function() {
   $("button#player2-roll").click(function() {
     diceRollTwo();
   });
+$("button#player1-hold").click(function(){
+updateScore();
+});
 });
 
 
