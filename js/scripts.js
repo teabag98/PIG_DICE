@@ -1,4 +1,5 @@
 //business logic
+//defining the constructor function for the two player objects
 function Dice() {
   this.total = 0;
   this.rollScore = 0;
@@ -20,7 +21,9 @@ function diceRollOne() {
   }
   else{
     playerOne.rollScore =0;
+    playerOne.total = 0;
     document.getElementById("current-score").innerHTML = playerOne.rollScore;
+    document.getElementById("total-score").innerHTML = playerOne.total;
     playerOneSwitch();
 
   }
@@ -52,11 +55,18 @@ Dice.prototype.hold =function(){
   this.total += this.rollscore;
 }
 
-function updateScore(){
+function updateFirstScore(){
   var total= playerOne.total += playerOne.rollScore;
   document.getElementById("total-score").innerHTML = total;
   playerOne.rollScore = 0;
   document.getElementById("current-score").innerHTML = playerOne.rollScore;
+}
+
+function updateSecondScore(){
+  var total= playerTwo.total += playerTwo.rollScore;
+  document.getElementById("total-score2").innerHTML = total;
+  playerTwo.rollScore = 0;
+  document.getElementById("current-score2").innerHTML = playerOne.rollScore;
 }
 
 
@@ -74,6 +84,13 @@ function playerTwoSwitch(){
   document.getElementById("player1-hold").disabled = false;
 }
 
+Dice.prototype.winner = function(){
+  if(this.total>=100){
+    alert("congratulations");
+  }
+}
+playerOne.winner();
+playerTwo.winner();
 
 
 
@@ -85,19 +102,10 @@ $(document).ready(function() {
   var gamerOne = $("input#gamer1").val();
   var gamerTwo = $("input#gamer2").val();
 
-  // var playerName = new Players(gamerOne,gamerTwo);
 
 
-
-  $("#play").click(function() {
-    $(".jumbotron").slideUp(800, )
-    // $("#tester").text(gamerOne);
-    // $("input#gamer1").val("");
-    //  $("input#gamer2").val("");
-    $(".playerOneName").text();
-    $(".total-score").text("total results");
-    $(".current-score").text("current score")
-
+  $("button#play").click(function() {
+    $(".jumbotron").slideUp(800, );
   });
   $("button#player1-roll").click(function() {
     diceRollOne();
@@ -106,7 +114,12 @@ $(document).ready(function() {
     diceRollTwo();
   });
 $("button#player1-hold").click(function(){
-updateScore();
+updateFirstScore();
+playerOneSwitch();
+});
+$("button#player2-hold").click(function(){
+updateSecondScore();
+playerTwoSwitch();
 });
 });
 
