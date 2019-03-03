@@ -1,5 +1,15 @@
+
+
+.total-score{
+  font-size: 2em;
+}
+.current-score{
+  font-size: 2em;
+}
+
+
 input{
-  
+
   width: 300px;
 }
 body{
@@ -33,12 +43,14 @@ body{
   opacity: 0.8;
   box-shadow: 0 0 20px cyan;
   text-align: center;
+  padding-bottom: 3em;
 
 }
 #play{
   border-radius: 20px;
  font-size: 2em;
  color: black;
+
 }
 
 .play{

@@ -17,14 +17,19 @@ $(document).ready(function() {
   var gamerOne = $("input#gamer1").val();
   var gamerTwo = $("input#gamer2").val();
 
-  var playerNames = new Players(gamerOne,gamerTwo);
+  var playerName = new Players(gamerOne,gamerTwo);
+
+
 
   $("#play").click(function() {
     $(".jumbotron").slideUp(800, )
     // $("#tester").text(gamerOne);
     // $("input#gamer1").val("");
     //  $("input#gamer2").val("");
-  $("#tester").text(playerNames.firstPlayer)
+    $(".playerOneName").text("aawenwewlkjvvgefeBHDJIOWKPAGKPDSHDFK");
+    $(".total-score").text("total results");
+    $(".current-score").text("current score")
+
   });
 });
 
