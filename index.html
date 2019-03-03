@@ -14,20 +14,19 @@
   <div class="container-fluid">
     <div class="jumbotron">
       <div class="row">
-        <div class="col-md-4 player-names">
+        <div class="col-md-4 player-names" id="first-player">
           <h1>player1</h1>
-          <form class="" action="index.html" method="post">
-            <input id="gamer1" style="width: 300px;" placeholder="Enter first name" class="form-control"  name="user1" type="text" />
-          </form>
+
+            <input id="gamer1"  placeholder="Enter first name" class="form-control"  name="user1" type="text" />
+
         </div>
         <div class="col-md-2">
 
         </div>
-        <div class="col-md-4 player-names">
+        <div class="col-md-4 player-names" id="second-player">
           <h1>player2</h1>
           <form class="" action="index.html" method="post">
-
-            <input id="gamer3" style="width: 300px;" placeholder="Enter first name" class="form-control" class="form-control"  name="user1" type="text" />
+            <input id="gamer2"  placeholder="Enter first name" class="form-control" class="form-control"  name="user1" type="text" />
             <br>
           </form>
         </div>
@@ -64,10 +63,11 @@
     <div class="row results">
       <div class="col-md-4 player1-results">
         <h1>player 1 is <span class="playerOneName"></span></h1>
-        <div class="total-score"> </div><br><br>
-        <div class="current-score"></div><br><br><br>
+        <div id="total-score"> </div><br><br>
+        <div id="current-score"></div><br><br><br>
+          <p> <img id="diceroll1" src="images/5.png" alt="p2"> </p>
         <div class="buttons">
-          <button id="player1-roll" type="button" class="btn btn-outline-info">roll</button>
+          <button  id="player1-roll" type="button" class="btn btn-outline-info">roll</button>
           <button id="player1-hold." type="button" class="btn btn-outline-info">hold</button>
         </div>
       </div>
@@ -78,9 +78,10 @@
         <h1>player 2 is <span class="playerTwoName"></span></h1>
         <div class="total-score"></div><br><br>
         <div class="current-score"></div><br><br><br>
+        <p> <img id="diceroll2" src="images/1.png" alt="p2"> </p>
         <div class="buttons">
-          <button id="roll" type="button" class="btn btn-outline-info">roll</button>
-          <button id="hold" type="button" class="btn btn-outline-info">hold</button>
+          <button id="player2-roll" type="button" class="btn btn-outline-info">roll</button>
+          <button id="player2-hold" type="button" class="btn btn-outline-info">hold</button>
         </div>
       </div>
     </div>

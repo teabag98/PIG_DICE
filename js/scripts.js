@@ -1,10 +1,30 @@
 //business logic
-function Players(player1, player2) {
-  this.firstPlayer = player1;
-  this.secondPlayer = player2;
+function Dice() {
+  this.total = 0;
+  this.rollScore = 0;
+}
+//change the dice patterns and show results
+var randomNumber;
 
+function diceRollOne() {
+  randomNumber = Math.floor(Math.random() * 6) + 1;
+  var images = document.getElementById("diceroll1");
+  images.src = "images/" + randomNumber + ".png";
 }
 
+function diceRollTwo() {
+  var randomNumber = Math.floor(Math.random() * 6) + 1;
+  var images = document.getElementById("diceroll2");
+  images.src = "images/" + randomNumber + ".png";
+}
+
+var playerOne = new Dice();
+var playerTwo = new Dice();
+
+if (randomNumber !== 1) {
+  playerOne.rollScore += randomNumber;
+  document.getElementById("current-score").innerHTML = playerOne.rollScore;
+}
 
 
 
@@ -17,7 +37,7 @@ $(document).ready(function() {
   var gamerOne = $("input#gamer1").val();
   var gamerTwo = $("input#gamer2").val();
 
-  var playerName = new Players(gamerOne,gamerTwo);
+  // var playerName = new Players(gamerOne,gamerTwo);
 
 
 
@@ -26,10 +46,16 @@ $(document).ready(function() {
     // $("#tester").text(gamerOne);
     // $("input#gamer1").val("");
     //  $("input#gamer2").val("");
-    $(".playerOneName").text("aawenwewlkjvvgefeBHDJIOWKPAGKPDSHDFK");
+    $(".playerOneName").text();
     $(".total-score").text("total results");
     $(".current-score").text("current score")
 
+  });
+  $("button#player1-roll").click(function() {
+    diceRollOne();
+  });
+  $("button#player2-roll").click(function() {
+    diceRollTwo();
   });
 });
 
