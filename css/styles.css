@@ -1,23 +1,21 @@
-
-
-.total-score{
-  font-size: 2em;
-}
-.current-score{
+.total-score {
   font-size: 2em;
 }
 
+.current-score {
+  font-size: 2em;
+}
 
-input{
-
+input {
   width: 300px;
 }
-body{
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+
+body {
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   font-family: 'Inconsolata', monospace;
 }
 
-.header{
+.header {
   display: none;
   background-image: url(https://cdn.shopify.com/s/files/1/0933/1330/products/Pig_Dice_1024x1024.JPG?v=1438377592);
   background-repeat: no-repeat;
@@ -27,70 +25,66 @@ body{
   text-align: center;
   font-size: 3em;
   color: white;
-
 }
 
-.jumbotron{
- background-image: url(https://st2.depositphotos.com/8846918/11650/i/950/depositphotos_116504844-stock-photo-3d-rendering-six-dice-on.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- opacity: 0.8;
+.jumbotron {
+  background-image: url(https://st2.depositphotos.com/8846918/11650/i/950/depositphotos_116504844-stock-photo-3d-rendering-six-dice-on.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
 }
 
-
-.player-names{
+.player-names {
   background-color: white;
   opacity: 0.8;
   box-shadow: 0 0 20px cyan;
   text-align: center;
   padding-bottom: 3em;
-
 }
-#play{
+
+#play {
   border-radius: 20px;
- font-size: 2em;
- color: black;
-
+  font-size: 2em;
+  color: black;
 }
 
-.play{
+.play {
   text-align: center;
   margin-right: 10em;
 }
 
-
-.player1-results{
-
+.player1-results {
   border: 1px solid grey;
-border-radius: 10px;
-text-align: center;
-padding: 15px 50px;
-margin-left: 2em;
-background-image: url();
-}
-
-.player2-results{
+  border-radius: 10px;
   text-align: center;
-  border: 1px solid grey;
-border-radius: 10px;
-text-align: center;
-padding: 15px 50px;
+  padding: 15px 50px;
+  margin-left: 2em;
+  box-shadow: 0 0 20px cyan;
+  /* background-image: url(); */
 }
 
-.guidelines{
+.player2-results {
+  border: 1px solid grey;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px 50px;
+  box-shadow: 0 0 20px cyan;
+}
+
+.guidelines {
   background-color: white;
   opacity: 0.8;
   box-shadow: 0 0 20px cyan;
   text-align: center;
   padding: 5em;
   font-size: 1.5em;
-
 }
-.guidelines > ul{
+
+.guidelines>ul {
   text-align: left;
 }
 
-.buttons>button{
+.buttons>button {
   padding: 1.5rem;
   border-radius: 2em;
   font-size: 2em;
