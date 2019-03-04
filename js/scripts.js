@@ -10,11 +10,13 @@ var randomNumber;
 var playerOne = new Dice();
 var playerTwo = new Dice();
 
+
+//display player names
 function names() {
-  var firstGamer = document.getElementById("gamer1").value();
-  var secondGamer = document.getElementById("gamer2").value();
-  document.getElementByClassName("playerOneName").innerHTML = firstGamer;
-  document.getElementByClassName("playerTwoName").innerHTML = secondGamer;
+  var firstGamer = document.getElementById("gamer1").value;
+  var secondGamer = document.getElementById("gamer2").value;
+  document.getElementById("playerOneName").innerHTML = firstGamer;
+  document.getElementById("playerTwoName").innerHTML = secondGamer;
 }
 
 //change the dice patterns and show results
