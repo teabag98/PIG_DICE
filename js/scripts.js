@@ -122,14 +122,11 @@ function winner() {
 
 //user logic
 $(document).ready(function() {
-  // var gamerOne = $("input#gamer1").val();
-  // var gamerTwo = $("input#gamer2").val();
-
-
-
   $("button#play").click(function() {
     $(".jumbotron").slideUp(800, );
-     names();
+    $(".header").show();
+    names();
+
   });
   $("button#player1-roll").click(function() {
     diceRollOne();

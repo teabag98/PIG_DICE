@@ -21,14 +21,19 @@ body {
 
 .header {
   display: none;
-  background-image: url(https://cdn.shopify.com/s/files/1/0933/1330/products/Pig_Dice_1024x1024.JPG?v=1438377592);
+  background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/N13e7awhgiljgescq/hand-throwing-dice-in-slow-motion-with-frozen-moment_hki9cddqe_thumbnail-full03.png);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
   height: 10em;
   text-align: center;
-  font-size: 3em;
+  font-size: 5em;
   color: white;
+  padding: 4em;
+}
+.header > h2{
+  font-size: 1em;
+  font-family: 'Oswald', sans-serif;
 }
 
 .jumbotron {
