@@ -11,10 +11,10 @@ input {
 }
 
 body {
-background-image: url(https://bloximages.chicago2.vip.townnews.com/atlanticcityweekly.com/content/tncms/assets/v3/editorial/6/d2/6d205506-7342-50de-8faf-c3ec2f73d78a/5ba12ed730531.image.jpg);
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
+  background-image: url(https://bloximages.chicago2.vip.townnews.com/atlanticcityweekly.com/content/tncms/assets/v3/editorial/6/d2/6d205506-7342-50de-8faf-c3ec2f73d78a/5ba12ed730531.image.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   font-family: 'Inconsolata', monospace;
   z-index: 1;
 }
@@ -37,7 +37,6 @@ background-size: cover;
   background-size: cover;
   opacity: 0.8;
 }
-
 
 .player-names {
   background-color: white;
@@ -78,9 +77,9 @@ background-size: cover;
   box-shadow: 0 0 20px cyan;
   background-color: white;
   opacity: 0.8;
-
 }
-.scores{
+
+.scores {
   background-color: cyan;
   box-shadow: 0 0 20px grey;
   border-radius: 2em;
@@ -104,8 +103,8 @@ background-size: cover;
   border-radius: 2em;
   font-size: 2em;
 }
-.opacity{
+
+.opacity {
   background-color: grey;
   opacity: 0.5;
-
 }
