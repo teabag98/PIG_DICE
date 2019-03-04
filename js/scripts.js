@@ -1,13 +1,19 @@
 //business logic
 //defining the constructor function for the two player objects
-function Dice() {
+function Dice(name) {
   this.total = 0;
   this.rollScore = 0;
+  this.name = name;
 }
 
 var randomNumber;
 var playerOne = new Dice();
 var playerTwo = new Dice();
+
+function names(){
+  var firstGamer = document.gamer1.value();
+  var secondGamer =document.gamer2.value();
+}
 
 //change the dice patterns and show results
 function diceRollOne() {
@@ -114,8 +120,8 @@ function winner(){
 
 //user logic
 $(document).ready(function() {
-  var gamerOne = $("input#gamer1").val();
-  var gamerTwo = $("input#gamer2").val();
+  // var gamerOne = $("input#gamer1").val();
+  // var gamerTwo = $("input#gamer2").val();
 
 
 
