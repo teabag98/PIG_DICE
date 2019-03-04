@@ -16,6 +16,7 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
   font-family: 'Inconsolata', monospace;
+  z-index: 1;
 }
 
 .header {
@@ -103,8 +104,8 @@ background-size: cover;
   border-radius: 2em;
   font-size: 2em;
 }
-/* .opacity{
+.opacity{
   background-color: grey;
   opacity: 0.5;
 
-} */
+}

@@ -139,11 +139,15 @@ $(document).ready(function() {
     updateFirstScore();
     playerOneSwitch();
     winner();
+    $(".player1-results").addClass("opacity");
+    $(".player2-results").removeClass("opacity");
   });
   $("button#player2-hold").click(function() {
     updateSecondScore();
     playerTwoSwitch();
     winner();
+    $(".player2-results").addClass("opacity");
+    $(".player1-results").removeClass("opacity");
   });
 });
 

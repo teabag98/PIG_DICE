@@ -24,7 +24,7 @@ If the random score is one, the total score becomes zero, So to avoid losing all
 
 
 ## Known Bugs
-The page doesn't refresh on default
+No known bugs so far
 ## Technologies Used
 HTML
 CSS
