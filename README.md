@@ -3,6 +3,7 @@
 #### By eric mwendwa
 ## Description
 Play the pigdice game in the explanation below,
+THIS project is screen responsive  ,,and that's one thing im proud of.
 ## B.D.D
 If the random score is one, the total score becomes zero, So to avoid losing all the points, the player is expected to hold.
 
