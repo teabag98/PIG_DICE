@@ -10,9 +10,11 @@ var randomNumber;
 var playerOne = new Dice();
 var playerTwo = new Dice();
 
-function names(){
-  var firstGamer = document.gamer1.value();
-  var secondGamer =document.gamer2.value();
+function names() {
+  var firstGamer = document.getElementById("gamer1").value();
+  var secondGamer = document.getElementById("gamer2").value();
+  document.getElementByClassName("playerOneName").innerHTML = firstGamer;
+  document.getElementByClassName("playerTwoName").innerHTML = secondGamer;
 }
 
 //change the dice patterns and show results
@@ -99,16 +101,14 @@ function playerTwoSwitch() {
 //
 //   }
 
- //checks winner
-function winner(){
-  if(playerOne.total >=100){
-    alert(gamerOne +" you are winner")
-  }
-  else if(playerTwo.total>=100){
-    alert(gamerTwo +" you are a winner")
+//checks winner
+function winner() {
+  if (playerOne.total >= 100) {
+    alert(gamerOne + " you are winner")
+  } else if (playerTwo.total >= 100) {
+    alert(gamerTwo + " you are a winner")
   }
 }
-
 
 
 
@@ -127,6 +127,7 @@ $(document).ready(function() {
 
   $("button#play").click(function() {
     $(".jumbotron").slideUp(800, );
+     names();
   });
   $("button#player1-roll").click(function() {
     diceRollOne();

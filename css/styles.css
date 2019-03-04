@@ -11,7 +11,10 @@ input {
 }
 
 body {
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+background-image: url(https://bloximages.chicago2.vip.townnews.com/atlanticcityweekly.com/content/tncms/assets/v3/editorial/6/d2/6d205506-7342-50de-8faf-c3ec2f73d78a/5ba12ed730531.image.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
   font-family: 'Inconsolata', monospace;
 }
 
@@ -61,6 +64,8 @@ body {
   padding: 15px 50px;
   margin-left: 2em;
   box-shadow: 0 0 20px cyan;
+  background-color: white;
+  opacity: 0.8;
   /* background-image: url(); */
 }
 
@@ -70,6 +75,14 @@ body {
   text-align: center;
   padding: 15px 50px;
   box-shadow: 0 0 20px cyan;
+  background-color: white;
+  opacity: 0.8;
+
+}
+.scores{
+  background-color: cyan;
+  box-shadow: 0 0 20px grey;
+  border-radius: 2em;
 }
 
 .guidelines {
@@ -90,3 +103,8 @@ body {
   border-radius: 2em;
   font-size: 2em;
 }
+/* .opacity{
+  background-color: grey;
+  opacity: 0.5;
+
+} */
