@@ -38,11 +38,11 @@ function diceRollOne() {
   }
 
 }
-
-function winner() {
-  if (playerOne.total >= 100) {
+function winner(){
+  if(playerOne.total >=100){
     alert("player one wins")
-  } else if (playerTwo.total >= 100) {
+  }
+  else if(playerTwo.total >=100){
     alert("player two wins")
   }
 }
@@ -106,30 +106,37 @@ function playerTwoSwitch() {
 }
 
 
+
+
+
+
+
+
 //user logic
 $(document).ready(function() {
-      $("button#play").click(function() {
-        $(".jumbotron").slideUp(800, );
-        $(".header").show();
-        names();
+  $("button#play").click(function() {
+    $(".jumbotron").slideUp(800, );
+    $(".header").show();
+    names();
 
-      });
-      $("button#player1-roll").click(function() {
-        diceRollOne();
-        winner();
-      });
-      $("button#player2-roll").click(function() {
-        diceRollTwo();
-        winner();
-      });
-      $("button#player1-hold").click(function() {
-        updateFirstScore();
-        playerOneSwitch();
-        winner();
+  });
+  $("button#player1-roll").click(function() {
+    diceRollOne();
+    winner();
+  });
+  $("button#player2-roll").click(function() {
+    diceRollTwo();
+    winner();
+  });
+  $("button#player1-hold").click(function() {
+    updateFirstScore();
+    playerOneSwitch();
+    winner();
+  });
+  $("button#player2-hold").click(function() {
+    updateSecondScore();
+    playerTwoSwitch();
+    winner();
 
-        $("button#player2-hold").click(function() {
-          updateSecondScore();
-          playerTwoSwitch();
-          winner();
-        });
-      });
+  });
+});
