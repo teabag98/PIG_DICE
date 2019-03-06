@@ -30,11 +30,20 @@ function diceRollOne() {
     document.getElementById("current-score").innerHTML = playerOne.rollScore;
   } else {
     playerOne.rollScore = 0;
-    playerOne.total = 0;
+    // playerOne.total = 0;
     document.getElementById("current-score").innerHTML = playerOne.rollScore;
     document.getElementById("total-score").innerHTML = playerOne.total;
     playerOneSwitch();
 
+  }
+
+}
+
+function winner() {
+  if (playerOne.total >= 100) {
+    alert("player one wins")
+  } else if (playerTwo.total >= 100) {
+    alert("player two wins")
   }
 }
 
@@ -52,7 +61,7 @@ function diceRollTwo() {
     document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
   } else {
     playerTwo.rollScore = 0;
-    playerTwo.total = 0;
+    // playerTwo.total = 0;
     document.getElementById("current-score2").innerHTML = playerTwo.rollScore;
     document.getElementById("total-score2").innerHTML = playerTwo.total;
     playerTwoSwitch();
@@ -75,7 +84,7 @@ function updateFirstScore() {
 
 function updateSecondScore() {
   var total = playerTwo.total += playerTwo.rollScore;
-  document.getElementById("total-score2").innerHTML = total*2;
+  document.getElementById("total-score2").innerHTML = total;
   playerTwo.rollScore = 0;
   document.getElementById("current-score2").innerHTML = playerOne.rollScore;
 }
@@ -97,49 +106,30 @@ function playerTwoSwitch() {
 }
 
 
-//checks winner
-function winner() {
-  if (playerOne.total >= 50) {
-    alert(gamerOne + " you are winner")
-  } else if (playerTwo.total >= 50) {
-    alert(gamerTwo + " you are a winner")
-  }
-}
-
-
-
-
-
-
-
-
-
 //user logic
 $(document).ready(function() {
-  $("button#play").click(function() {
-    $(".jumbotron").slideUp(800, );
-    $(".header").show();
-    names();
+      $("button#play").click(function() {
+        $(".jumbotron").slideUp(800, );
+        $(".header").show();
+        names();
 
-  });
-  $("button#player1-roll").click(function() {
-    diceRollOne();
-  });
-  $("button#player2-roll").click(function() {
-    diceRollTwo();
-  });
-  $("button#player1-hold").click(function() {
-    updateFirstScore();
-    playerOneSwitch();
-    winner();
-    $(".player1-results").addClass("opacity");
-    $(".player2-results").removeClass("opacity");
-  });
-  $("button#player2-hold").click(function() {
-    updateSecondScore();
-    playerTwoSwitch();
-    winner();
-    $(".player2-results").addClass("opacity");
-    $(".player1-results").removeClass("opacity");
-  });
-});
+      });
+      $("button#player1-roll").click(function() {
+        diceRollOne();
+        winner();
+      });
+      $("button#player2-roll").click(function() {
+        diceRollTwo();
+        winner();
+      });
+      $("button#player1-hold").click(function() {
+        updateFirstScore();
+        playerOneSwitch();
+        winner();
+
+        $("button#player2-hold").click(function() {
+          updateSecondScore();
+          playerTwoSwitch();
+          winner();
+        });
+      });

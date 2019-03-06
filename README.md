@@ -1,9 +1,8 @@
 # Pig Dice Game
 #### date , 02/3/2019
-#### By eric mwendwa
+#### By eric king'oo
 ## Description
-Play the pigdice game in the explanation below,
-THIS project is screen responsive  ,,and that's one thing im proud of.
+The pigdice game is about toggling dice. player wins if they get to 100 scores and loses all points if they score 1.
 ## B.D.D
 If the random score is one, the total score becomes zero, So to avoid losing all the points, the player is expected to hold.
 
